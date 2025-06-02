@@ -1,0 +1,50 @@
+<Project>
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<LangVersion>13.0</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Version>1.0.0</Version>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>CommitSharp</Title>
+		<Authors>Lamparter</Authors>
+		<Company>Riverside Valley Corporation</Company>
+		<Copyright>Copyright (c) Lamparter</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/Lamparter/CommitSharp</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>git; cli; abstraction; libgit2; riverside</PackageTags>
+		<Description>CommitSharp is a library for interacting with Git via the CLI.</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+		<PackageIcon>PackageLogo.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="$(MSBuildThisFileDirectory)\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="$(MSBuildThisFileDirectory)\eng\PackageLogo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<None Include="$(MSBuildThisFileFullPath)" />
+	</ItemGroup>
+</Project>
